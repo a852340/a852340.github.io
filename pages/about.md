@@ -20,7 +20,7 @@ permalink: /about/
 {% for website in site.data.social %}
 <li>{{website.sitename }}：<a href="{{ website.url }}" target="_blank">@{{ website.name }}</a></li>
 {% endfor %}
-
+</ul>
 
 ## Skill Keywords
 
@@ -32,3 +32,4 @@ permalink: /about/
 {% endfor %}
 </div>
 {% endfor %}
+</ul>
