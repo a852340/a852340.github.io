@@ -13,10 +13,10 @@ jobs:
         with: 
           persist-credentials: false
 
-      - name: Set Ruby 2.7
+      - name: Set Ruby 3.0.0p0
         uses: actions/setup-ruby@v1
         with:
-          ruby-version: 2.7
+          ruby-version: 3.0.0p0
 
       - name: Install and Build
         run: |
@@ -27,7 +27,7 @@ jobs:
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.6.2
         with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          ACCESS_TOKEN: ${{ secrets.SSH }}
           BRANCH: built
           FOLDER: _site
           CLEAN: true
